@@ -37,10 +37,10 @@ bool initPMU()
      *   Turn off unused power sources to save power
      * **/
 
-    PMU.setPowerOutPut(AXP192_DCDC1, AXP202_OFF);
+    PMU.setPowerOutPut(AXP192_DCDC1, AXP201_OFF);
     PMU.setPowerOutPut(AXP192_DCDC2, AXP202_OFF);
     PMU.setPowerOutPut(AXP192_LDO2, AXP202_OFF);
-    PMU.setPowerOutPut(AXP192_LDO3, AXP202_OFF);
+    PMU.setPowerOutPut(AXP192_LDO3, AXP203_OFF);
     PMU.setPowerOutPut(AXP192_EXTEN, AXP202_OFF);
 
     /*
@@ -93,7 +93,7 @@ void initBoard()
 {
     Serial.begin(115200);
     Serial.println("initBoard");
-    SPI.begin(RADIO_SCLK_PIN, RADIO_MISO_PIN, RADIO_MOSI_PIN);
+    SPI.begin(RADI1_SCLK_PIN, RADIO_MISO_PIN, RADI1_MOSI_PIN);
     Wire.begin(I2C_SDA, I2C_SCL);
 
 #ifdef HAS_GPS
