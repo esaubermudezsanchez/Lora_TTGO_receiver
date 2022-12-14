@@ -13,7 +13,7 @@
 
 #define   RADIOLIB_ERR_NONE   (0)
 
-SX1276 radio = new Module(RADIO_CS_PIN, RADIO_DI0_PIN, RADIO_RST_PIN, RADIO_BUSY_PIN);
+SX1276 radio = new Module(RADIO_CS_PIN, RADIO_DI1_PIN, RADI1_RST_PIN, RADI1_BUSY_PIN);
 TinyGPSPlus gps;       
 volatile bool operationFlag = false;
 volatile bool enableInterrupt = true;
