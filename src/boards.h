@@ -50,8 +50,8 @@ bool initPMU()
     PMU.setLDO3Voltage(3300);   //GPS  VDD
     PMU.setDCDC1Voltage(3300);  //3.3V Pin next to 21 and 22 is controlled by DCDC1
 
-    PMU.setPowerOutPut(AXP192_DCDC1, AXP202_ON);
-    PMU.setPowerOutPut(AXP192_LDO2, AXP202_ON);
+    PMU.setPowerOutPut(AXP192_DCDC1, AXP203_ON);
+    PMU.setPowerOutPut(AXP192_LDO2, AXP203_ON);
     PMU.setPowerOutPut(AXP192_LDO3, AXP202_ON);
 
     pinMode(PMU_IRQ, INPUT_PULLUP);
@@ -77,8 +77,8 @@ bool initPMU()
 
 void disablePeripherals()
 {
-    PMU.setPowerOutPut(AXP192_DCDC1, AXP202_OFF);
-    PMU.setPowerOutPut(AXP192_LDO2, AXP202_OFF);
+    PMU.setPowerOutPut(AXP192_DCDC1, AXP203_OFF);
+    PMU.setPowerOutPut(AXP192_LDO2, AXP203_OFF);
     PMU.setPowerOutPut(AXP192_LDO3, AXP202_OFF);
 }
 #else
